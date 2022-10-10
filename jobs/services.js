@@ -11,14 +11,15 @@ const notifyHeartbeat = async (url) => {
   return axios.post(url);
 }
 
-const checkUptime = async ({url, method = "get", headers = {}, data}) => {
+const checkUptime = async ({healthcheck, method = "get", headers = {}, data}) => {
   try {
-    const response = await axios({
+    const payload = {
       method,
-      url,
+      url: healthcheck,
       data,
       headers
-    })
+    }
+    const response = await axios(payload)
     return response.status===200;
   } catch (error) {
     cabin.error(error.message);
