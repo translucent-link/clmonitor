@@ -31,7 +31,7 @@ const loadConfig = async () => {
   if (configPath === undefined) {
     throw new Error("CONFIG_PATH not set");
   }
-  return yaml.load(await fs.readFile('config.yaml', 'utf8'));
+  return yaml.load(await fs.readFile(configPath, 'utf8'));
 }
 
 const run = async () => {
