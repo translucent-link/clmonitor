@@ -43,7 +43,7 @@ The services section defines a list of hosts to monitor using a health check URL
 
 # To deploy using Docker
 
-This repo publishes prebuilt Docker containers located at https://hub.docker.com/repository/docker/translucentlink/clmonitor.
+This repo publishes prebuilt Docker containers located at https://hub.docker.com/r/translucentlink/clmonitor.
 
 You can run the container as follows
 
